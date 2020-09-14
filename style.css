@@ -6,7 +6,7 @@ html *
 
 body
 {
-    background-color: #e7e7e7;
+    background-color: #f8f8f8;
 }
 
 .header
@@ -18,9 +18,18 @@ body
     border-width: 2px;
 }
 
+.footer
+{
+    padding-bottom:.2cm;
+    padding-top:.4cm;
+    border-style: dotted none none none;
+    border-color: slategrey;
+    border-width: 2px;
+}
+
 .titleText
 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     text-align: center;
     text-decoration:none;
@@ -28,7 +37,7 @@ body
 
 .headerItem
 {
-    font-size: 16px;
+    font-size: 18px;
     text-align:center;
     text-decoration:none;
 }
@@ -37,13 +46,22 @@ body
 {
     padding-top: 1.2em;
     text-align: left;
-    width: 600px;
+    width: 850px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.3em;
+}
+
+.sideSection
+{
+    padding-top: 1.2 em;
+    width: 250px;
+    height: 200px;
+    float: left;
 }
 
 .spacer
 {
     display:inline-block;
-    width:14px;
+    width:120px;
 }
