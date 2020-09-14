@@ -1,0 +1,49 @@
+html *
+{
+    color: #65718a;
+    font-family: 'Ubunto Mono', monospace;
+}
+
+body
+{
+    background-color: #e7e7e7;
+}
+
+.header
+{
+    padding-bottom:.2cm;
+    padding-top:.4cm;
+    border-style: none none dotted none;
+    border-color: slategrey;
+    border-width: 2px;
+}
+
+.titleText
+{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration:none;
+}
+
+.headerItem
+{
+    font-size: 16px;
+    text-align:center;
+    text-decoration:none;
+}
+
+.main
+{
+    padding-top: 1.2em;
+    text-align: left;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spacer
+{
+    display:inline-block;
+    width:14px;
+}
