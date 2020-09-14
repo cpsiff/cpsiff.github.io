@@ -52,6 +52,12 @@ body
     line-height: 1.3em;
 }
 
+.bodyLink
+{
+    text-decoration: none;
+    color: #1974eb
+}
+
 .sideSection
 {
     padding-top: 1.2 em;
