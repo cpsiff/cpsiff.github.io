@@ -16,6 +16,13 @@ body
     border-style: none none dotted none;
     border-color: slategrey;
     border-width: 2px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    max-width: 880px;
+    margin: auto;
 }
 
 .footer
@@ -25,6 +32,8 @@ body
     border-style: dotted none none none;
     border-color: slategrey;
     border-width: 2px;
+    max-width: 880px;
+    margin: auto;
 }
 
 .titleText
