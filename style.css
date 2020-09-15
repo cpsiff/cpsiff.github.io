@@ -32,14 +32,28 @@ body
     font-size: 26px;
     font-weight: bold;
     text-align: center;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .headerItem
 {
     font-size: 18px;
-    text-align:center;
-    text-decoration:none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sectionHeader
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sectionHeaderLink
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1974eb    
 }
 
 .main
