@@ -95,8 +95,13 @@ body
 {
     padding-top: 1.2 em;
     width: 250px;
-    height: 220px;
+    height: 250px;
     float: left;
+}
+
+#home
+{
+    min-height: 250px;
 }
 
 .indent
