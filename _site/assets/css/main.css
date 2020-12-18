@@ -25,7 +25,7 @@ figure {
  * Basic styling
  */
 body {
-  font-family: Charter, Georgia, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.7;
   font-weight: 300;
@@ -378,7 +378,7 @@ pre {
   font-size: 40px;
   letter-spacing: -1px;
   line-height: 1.2;
-  font-family: Charter, Georgia, Helvetica, Arial, sans-serif; }
+  font-family: Helvetica, Arial, sans-serif; }
   @media screen and (max-width: 500px) {
     .post-title {
       font-size: 34px; } }
@@ -388,7 +388,7 @@ pre {
   letter-spacing: -1px;
   line-height: 1;
   color: #777;
-  font-family: Charter, Georgia, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-style: oblique;
   position: relative;
   top: -0.3em; }
