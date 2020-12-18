@@ -23,8 +23,7 @@ github_username:  cpsiff
 
 # Build settings
 markdown: kramdown
-remote_theme: eliottvincent/bay
-theme: bay_jekyll_theme
+remote_theme: cpsiff/bay
 plugins:
   - jekyll-feed
 
