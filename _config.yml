@@ -29,9 +29,9 @@ plugins:
 
 header:
   pages:
-    - name: Projects  # <-- projects.md
+    - name: Projects # <-- projects.md
     - name: Research # <-- research.md
-    - name: CV  # <-- cv.md
+    - name: CV # <-- cv.md
 
 
 footer:
