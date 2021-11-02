@@ -6,7 +6,7 @@ slug: /research
 
 #### Peer-Reviewed Conference Papers
 
-**C. Sifferman**, M. Gupta, M. Gleicher. Geometric Applications of Single-Pixel Depth Sensors. _IEEE International Conference on Robotics and Automation (ICRA)_, 2022.<br>
+**(In Review)** **C. Sifferman**, M. Gupta, M. Gleicher. Geometric Applications of Single-Pixel Depth Sensors. _IEEE International Conference on Robotics and Automation (ICRA)_, 2022.<br>
 
 Z. Moore, **C. Sifferman**, S. Tullis, M. Ma, R. Proffitt, M. Skubic.[In-Home Daily Activity Recognition and Assessment System for Stroke Rehabilitation.](https://ieeexplore.ieee.org/document/8983376) _IEEE International Conference on Bioinformatics and Biomedicine (BIBM)_, 2019.<br><br>
 
