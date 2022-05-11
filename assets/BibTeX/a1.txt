@@ -1,0 +1,10 @@
+@INPROCEEDINGS{Moore2019,
+  author={Moore, Zoë and Sifferman, Carter and Tullis, Shaniah and Ma, Mengxuan and Proffitt, Rachel and Skubic, Marjorie},
+  booktitle={2019 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)}, 
+  title={Depth Sensor-Based In-Home Daily Activity Recognition and Assessment System for Stroke Rehabilitation}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1051-1056},
+  doi={10.1109/BIBM47256.2019.8983376}
+}

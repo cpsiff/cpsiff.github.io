@@ -29,9 +29,8 @@ plugins:
 
 header:
   pages:
-    - name: Projects # <-- projects.md
     - name: Research # <-- research.md
-    - name: CV # <-- cv.md
+    - name: Projects # <-- projects.md
 
 
 footer:
@@ -45,6 +44,8 @@ footer:
       link: http://linkedin.com/in/cpsiff
     - name: GitHub
       link: http://github.com/cpsiff
+    - name: Scholar
+      link: https://scholar.google.com/citations?user=tiajEPoAAAAJ&hl=en
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
