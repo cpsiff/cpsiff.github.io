@@ -5,8 +5,8 @@ slug: /research
 ---
 
 #### Peer-Reviewed Journal Articles
-**C. Sifferman**, D. Mehrotra, M. Gupta, M. Gleicher. Geometric Applications of Single-Pixel Depth Sensors. _IEEE Robotics and Automation Letters (RA-L)_, 2022.<br>
-Project Web | PDF | IEEE Xplore | BibTeX
+**C. Sifferman**, D. Mehrotra, M. Gupta, M. Gleicher. Geometric Calibration of Single-Pixel Depth Sensors. Robotics and Automation Letters (RA-L). _In IEEE Robotics and Automation Letters (RA-L)_, 2022.<br>
+[IEEE Xplore](https://ieeexplore.ieee.org/document/9779560) | [BibTeX](assets/BibTeX/j1.txt)
 
 #### Peer-Reviewed Conference Papers
 Z. Moore, **C. Sifferman**, S. Tullis, M. Ma, R. Proffitt, M. Skubic. In-Home Daily Activity Recognition and Assessment System for Stroke Rehabilitation. _IEEE International Conference on Bioinformatics and Biomedicine (BIBM)_, 2019.<br>
