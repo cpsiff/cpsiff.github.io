@@ -5,7 +5,7 @@ slug: /research
 ---
 
 #### Peer-Reviewed Journal Articles
-**C. Sifferman**, D. Mehrotra, M. Gupta, M. Gleicher. Geometric Calibration of Single-Pixel Depth Sensors. Robotics and Automation Letters (RA-L). _In Proceedings International Conference on Intelligent Robots and Systems (IROS)_, 2022.<br>
+**C. Sifferman**, D. Mehrotra, M. Gupta, M. Gleicher. Geometric Calibration of Single-Pixel Distance Sensors. Robotics and Automation Letters (RA-L). _In Proceedings International Conference on Intelligent Robots and Systems (IROS)_, 2022.<br>
 [PDF](assets/Sifferman_RAL_22.pdf) | [IEEE Xplore](https://ieeexplore.ieee.org/document/9779560) | [Code](https://github.com/uwgraphics/SPD-Geometric-Calibration) | [BibTeX](assets/BibTeX/j1.txt)
 
 #### Peer-Reviewed Conference Papers
