@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Carter Sifferman</title>
-    <link>http://cpsiff.github.io/</link>
+    <link>https://cpsiff.github.io/</link>
     <description>Recent content on Carter Sifferman</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://cpsiff.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://cpsiff.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
