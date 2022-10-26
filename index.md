@@ -9,4 +9,4 @@ Computer Science PhD Student at the University of Wisconsin - Madison, intereste
 
 Most recently, we published a paper in RA-L titled Geometric Calibration of Single-Pixel Distance Sensors, in which we describe and evaluate a procedure for calibrating the pose of a distance sensor attached to a robot arm.
 
-[View my CV]({{ site.baseurl }}{% link /assets/CV_Carter_Sifferman.pdf %}) (updated May 2022)
+[View my CV]({{ site.baseurl }}{% link /assets/CV_Carter_Sifferman.pdf %}) (updated October 2022)
