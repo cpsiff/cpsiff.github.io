@@ -1,0 +1,10 @@
+@ARTICLE{Sifferman2022,
+  author={Sifferman, Carter and Mehrotra, Dev and Gupta, Mohit and Gleicher, Michael},
+  journal={IEEE Robotics and Automation Letters},
+  title={Geometric Calibration of Single-Pixel Distance Sensors},
+  year={2022},
+  volume={7},
+  number={3},
+  pages={6598-6605},
+  doi={10.1109/LRA.2022.3176453}
+}

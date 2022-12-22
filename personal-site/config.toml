@@ -1,0 +1,54 @@
+baseURL = 'https://cpsiff.github.io/'
+languageCode = 'en-us'
+title = 'Carter Sifferman'
+publishdir = "cpsiff.github.io"
+theme = "personal-hugo-theme"
+
+[params]
+    colortheme = "white"
+    description = """I am a Computer Science PhD student at the University of Wisconsin - Madison, where I work on **computer vision** and **robot sensing** primarily with single photon cameras. I am advised by [Michael Gleicher](https://gleicher.sites.cs.wisc.edu/) and [Mohit Gupta](https://wisionlab.com/people/mohit-gupta/).
+    """
+    mainSection = "testsec"
+
+[[params.social]]
+    name = "email"
+    link = "sifferman@wisc.edu"
+
+[[params.social]]
+    name = "GitHub"
+    link = "https://github.com/cpsiff"
+
+[[params.social]]
+    name = "LinkedIn"
+    link = "https://www.linkedin.com/in/cpsiff/"
+
+[[params.social]]
+    name = "scholar"
+    link = "https://scholar.google.com/citations?user=tiajEPoAAAAJ&hl=en"
+
+[[params.publications]]
+    title = "Geometric Calibration of Single Pixel Distance Sensors"
+    authors = "Carter Sifferman, Dev Mehrotra, Mohit Gupta, Michael Gleicher"
+    venue = "Robotics and Automation Letters (RA-L) in proc. IROS 2022"
+    thumbnail = "pub_thumbnails/02.png"
+    web = "https://cpsiff.github.io/Geometric-Calibration/"
+    pdf = "assets/Sifferman_RAL_22.pdf"
+    code = "https://github.com/uwgraphics/SPD-Geometric-Calibration"
+    bibtex = "assets/BibTeX/02.txt"
+
+[[params.publications]]
+    title = "In Home Daily Activity Recognition and Assessment System for Stroke Rehabilitation"
+    authors = "Zoë Moore, Carter Sifferman, Shania Tullis, Mengxuan Ma, Rachel Proffitt, Marjorie Skubic"
+    venue = "IEEE Bionformatics and Biomedicine (BIBM) 2019"
+    thumbnail = "pub_thumbnails/01.png"
+    bibtex = "assets/BibTeX/01.txt"
+    xplore = "https://ieeexplore.ieee.org/document/8983376"
+
+[[params.otherwork]]
+    title = "A Review of Scene Representations for Robot Manipulators"
+    authors = "Carter Sifferman"
+    description = "Part of my PhD qualifying exam, Dec. 2022"
+    thumbnail = "other_thumbnails/01.png"
+    pdf = "assets/Sifferman_Review_22.pdf"
+    bibtex = "assets/BibTeX/review.txt"
+    arxiv = "todo"
