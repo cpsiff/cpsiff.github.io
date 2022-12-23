@@ -4,7 +4,6 @@
   {{ if isset .Site.Params "description" }}
     {{ .Site.Params.description | $.Page.RenderString }}
   {{ end }}
-  {{ partial "optional-about.html" . }}
 
   {{ if isset .Site.Params "social" }}
     <br><br><br><br><br><br>
