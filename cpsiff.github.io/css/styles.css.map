@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/home/carter/repos/cpsiff.github.io-source/personal-site",
+	"sourceRoot": "/home/carter/repos/cpsiff.github.io",
 	"sources": [
 		"themes/personal-hugo-theme/assets/scss/style.scss",
 		"themes/personal-hugo-theme/assets/scss/_variables.scss",
