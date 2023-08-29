@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Geometric Calibration</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/video_comparison.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Geometric Calibration of Single Pixel Distance Sensors</br> 
+                <small>
+                Robotics and Automation Letters (RA-L), In Proceedings IROS 2022
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://cpsiff.github.io">
+                          Carter Sifferman
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Dev Mehrotra
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wisionlab.com/people/mohit-gupta/">
+                          Mohit Gupta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gleicher.sites.cs.wisc.edu/">
+                          Michael Gleicher
+                        </a>
+                    </li>
+                    </br>University of Wisconsin - Madison
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="../pdf/Sifferman2022.pdf">
+                            <image src="img/paper_image.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=XInH1mUOb-g">
+                            <image src="img/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Single-pixel distance sensors are a low-power, low-cost option for distance ranging, and are often attached to robots for collision detection and avoidance. The relative sensor pose, i.e., its position and orientation relative to the robot, must be known to relate its measurements to 3D scene geometry. However, sensor pose is difficult to measure accurately, which has precluded the use of single-pixel sensors from applications such as environment mapping and precise collision avoidance. In this work, we provide a calibration procedure that can accurately determine the pose of a single-pixel distance sensor given only the known motion of the robot and an unknown planar target. We establish a geometric relationship between the relative sensor pose, robot motion, and an arbitrary plane, and show that the plane and sensor parameters can be recovered via nonlinear optimization. The result is a practical procedure for sensor calibration. We evaluate the procedure in simulation and in real world experiments, and provide an open source implementation. We consider two commonly available sensors (ST VL6180X and ST VL53L3CX) and characterize them to show that while they deviate from the idealized model used in our derivation, their poses can be recovered precisely and used for effective 3D scene reconstruction.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/XInH1mUOb-g?si=rATZWSI1EHAE5Xyb" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-12 col-md-offset-0">
+                    <textarea id="bibtex" class="form-control" readonly>
+@ARTICLE{sifferman2022geometric,
+    author={Sifferman, Carter and Mehrotra, Dev and Gupta, Mohit and Gleicher, Michael},
+    journal={IEEE Robotics and Automation Letters},
+    title={Geometric Calibration of Single-Pixel Distance Sensors},
+    year={2022},
+    volume={7},
+    number={3},
+    pages={6598-6605},
+    doi={10.1109/LRA.2022.3176453}      
+}
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
