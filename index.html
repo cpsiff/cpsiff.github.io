@@ -55,8 +55,11 @@
       <tr onmouseout="unlock_prox_stop()" onmouseover="unlock_prox_start()" bgcolor="#e1ffd0">
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
-            <div class="two" id='unlock_prox_img'><img src='images/unlock_prox_after.png' width="160"></div>
-            <img src='images/unlock_prox_after.png' width="160">
+            <div class="two" id='unlock_prox_img'><video  width=100% height=100% muted autoplay loop>
+              <source src="images/unlock_prox_after.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video></div>
+            <img src='images/unlock_prox_before.png' width="160">
           </div>
           <script type="text/javascript">
             function unlock_prox_start() {
@@ -79,7 +82,7 @@
           <a href="https://wisionlab.com/people/mohit-gupta/">Mohit Gupta</a>,
           <a href="https://gleicher.sites.cs.wisc.edu/">Michael Gleicher</a>,
           <br>
-          <em> RA-L </em> In Proc. <em> ICRA </em>, 2024
+          <em> RA-L </em> To Appear: <em> ICRA </em>, 2024
           <br>
           <a href="unlocking_proximity_sensors/index.html">project page</a> /
           <a href="bib/Sifferman2023b.bib">bibtex</a> /
@@ -151,7 +154,7 @@
           <a href="https://wisionlab.com/people/mohit-gupta/">Mohit Gupta</a>,
           <a href="https://gleicher.sites.cs.wisc.edu/">Michael Gleicher</a>,
           <br>
-          <em>RA-L</em> in Proc. <em> ICRA </em>, 2022
+          <em>RA-L</em> in Proc. <em> IROS </em>, 2022
           <br>
           <a href="geometric-calibration/index.html">project page</a> /
           <a href="https://www.youtube.com/watch?v=XInH1mUOb-g">video</a> /
@@ -236,9 +239,11 @@
     </tr>
     </tbody></table>
 
-    <!-- align this to the right -->
-
-    page template from <a href="https://jonbarron.info//">Jon Barron</a>
+    <tr>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        website template from <a href="https://jonbarron.info//">Jon Barron</a>
+      </td>
+    </tr>
 
   </body>
 </html>
