@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Towards 3D Vision</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/video_comparison.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Towards 3D Vision with Low-Cost Single-Photon Cameras</br> 
+                <small>
+                CVPR 2024
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://pages.cs.wisc.edu/~fmu/">
+                          Fangzhou Mu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://cpsiff.github.io">
+                          Carter Sifferman
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wisionlab.com/people/sacha-jungerman/">
+                          Sacha Jungerman
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                          Yiquan Li
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                          Mark Han
+                        </a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="https://gleicher.sites.cs.wisc.edu/">
+                          Michael Gleicher
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wisionlab.com/people/mohit-gupta/">
+                          Mohit Gupta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.biostat.wisc.edu/~yli/">
+                          Yin Li
+                        </a>
+                    </li>
+                    </br>University of Wisconsin - Madison
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/pdf/2403.17801.pdf">
+                            <image src="img/paper_image.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Mu24CVPR_Supp.pdf">
+                            <image src="img/supplement_image.png" height="60px">
+                                <h4><strong>Supplement</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <img src="img/teaser.png" class="img-responsive" alt="Teaser Image" style="width:100%;">
+            </div>
+            <div class="col-md-8 col-md-offset-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    We present a method for reconstructing 3D shape of arbitrary Lambertian objects based on measurements by miniature, energy-efficient, low-cost single-photon cameras. These cameras, operating as time resolved image sensors, illuminate the scene with a very fast pulse of diffuse light and record the shape of that pulse as it returns back from the scene at a high temporal resolution. We propose to model this image formation process, account for its non-idealities, and adapt neural rendering to reconstruct 3D geometry from a set of spatially distributed sensors with known poses. We show that our approach can successfully recover complex 3D shapes from simulated data. We further demonstrate 3D object reconstruction from real-world captures, utilizing measurements from a commodity proximity sensor. Our work draws a connection between image-based modeling and active range scanning and is a step towards 3D vision with single-photon cameras.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Method
+                </h3>
+                <img src="img/method.png" class="img-responsive" alt="Teaser Image" style="width:100%;">
+                <br>
+                The scene is modeled as a neural implicit surface in the form of an SDF. To render a transient, we approximate the idealized image formation process by sampling rays within each pixel's FoV, and subsequently points on those rays. This idealized transient waveform is then convolved with the sensor's laser impulse response to model the transient histogram formation. Finally, we optimize the scene representation by minimizing a loss between the rendered transients and the observations.
+            </div>
+            <div class="col-md-8 col-md-offset-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Simulated Results
+                </h3>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="img/sim.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="col-md-8 col-md-offset-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Real-world Results
+                </h3>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="img/real_captures_1.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="col-md-8 col-md-offset-2"></div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-12 col-md-offset-0">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{Mu24Towards3DVision,
+    title={Towards 3D Vision with Low-Cost Single-Photon Cameras}, 
+    author={Fangzhou Mu and Carter Sifferman and Sacha Jungerman and Yiquan Li and Mark Han and Michael Gleicher and Mohit Gupta and Yin Li},
+    year={2024},
+    eprint={2403.17801},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
