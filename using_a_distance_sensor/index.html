@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Using a Distance Sensor</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/video_comparison.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Using a Distance Sensor to Detect Deviations in a Planar Surface</br> 
+                <small>
+                RA-L 2024 / To appear: ICRA 2025
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://cpsiff.github.io">
+                          Carter Sifferman
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            William Sun
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wisionlab.com/people/mohit-gupta/">
+                          Mohit Gupta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gleicher.sites.cs.wisc.edu/">
+                          Michael Gleicher
+                        </a>
+                    </li>
+                    </br>University of Wisconsin - Madison
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="">
+                            <image src="img/paper_image.png" height="60px">
+                                <h4><strong>Paper (coming soon)</strong></h4>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://www.youtube.com/watch?v=vJdfpmd6OE0">
+                            <image src="img/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/uwgraphics/ProximityPlanarRecovery">
+                            <image src="img/github_logo.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    We investigate methods for determining if a planar surface contains geometric deviations (<i>e.g.</i>, protrusions, objects, divots, or cliffs) using only an instantaneous measurement from a miniature optical time-of-flight sensor. The key to our method is to utilize the entirety of information encoded in raw time-of-flight data captured by off-the-shelf distance sensors. We provide an analysis of the problem in which we identify the key ambiguity between geometry and surface photometrics. To overcome this challenging ambiguity, we fit a Gaussian mixture model to a small dataset of planar surface measurements. This model implicitly captures the expected geometry and distribution of photometrics of the planar surface and is used to identify measurements that are likely to contain deviations. We characterize our method on a variety of surfaces and planar deviations across a range of scenarios. We find that our method utilizing raw time-of-flight data outperforms baselines which use only derived distance estimates. We build an example application in which our method enables mobile robot obstacle and cliff avoidance over a wide field-of-view.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Supplementary Video Demonstration
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/vtP5Ktp-oIo?si=Y9-fK6CN-c0geqPh" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-12 col-md-offset-0">
+                    <textarea id="bibtex" class="form-control" readonly>
+                        @article{Sifferman2023,
+                            author={Sifferman, Carter and Wang, Yeping and Gupta, Mohit and Gleicher, Michael},
+                            journal={IEEE Robotics and Automation Letters}, 
+                            title={Unlocking the Performance of Proximity Sensors by Utilizing Transient Histograms}, 
+                            year={2023},
+                            volume={8},
+                            number={10},
+                            pages={6843-6850},
+                            doi={10.1109/LRA.2023.3313069}
+                      }
+                    </textarea>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
