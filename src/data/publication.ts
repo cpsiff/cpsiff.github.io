@@ -71,6 +71,7 @@ export const publicationData: Publication[] = [
     title: "Geometric Calibration of Single Pixel Distance Sensors",
     authors: "Carter Sifferman, Dev Mehrotra, Mohit Gupta, Michael Gleicher",
     paperUrl: "/pdf/Sifferman2022.pdf",
+    projectPageUrl: "/papers/geometric-calibration/index.html",
     bibtex: "bin/Sifferman2022.bib",
     tldr: "A depth sensor attached to a robot arm can be extrinsically calibrated relative to that robot arm using only an unknown planar surface.",
     imageUrl: "/images/calibration_before.png"
