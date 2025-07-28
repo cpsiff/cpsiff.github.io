@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
         destination: '/using_a_distance_sensor/index.html',
         permanent: true,
       },
+      {
+        source: '/recovering_parametric_scenes',
+        destination: '/recovering_parametric_scenes/index.html',
+        permanent: true,
+      },
     ];
   },
 };
