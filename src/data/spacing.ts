@@ -3,6 +3,9 @@ export const spacing = {
   // Main section spacing
   sectionGap: "space-y-8", // Gap between major sections (News, Experience, Publications, etc.)
   
+  // Layout spacing
+  columnGap: "gap-0", // Horizontal gap between left and right columns
+  
   // Section header spacing
   sectionHeaderBottom: "mb-3", // Bottom margin after section headers
   
