@@ -37,7 +37,8 @@ export const aboutMe: AboutMe = {
   I will be graduating shortly and am seeking a full-time
   <strong> applied scientist</strong>, <strong>research scientist</strong>,
   or <strong>engineering</strong> role. I am most interested in solving important problems
-  in computer vision, imaging, and robotics. See <a href="/Carter_Sifferman_CV.pdf"/>my CV</a> for
+  in computer vision, imaging, and robotics, and am open to exploring new areas if
+  the mission is right. See <a href="/Carter_Sifferman_CV.pdf"/>my CV</a> for
   more info, and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.`,
   email: "sifferman@wisc.edu",
   imageUrl:
