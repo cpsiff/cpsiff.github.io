@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Using a Distance Sensor</title>
+    <title>Recovering Parametric Scenes from Very Few Time-of-Flight Pixels</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +36,7 @@
             <h2 class="col-md-12 text-center">
                 Recovering Parametric Scenes from Very Few Time-of-Flight Pixels</br> 
                 <small>
-                To appear: ICCV 2025
+                ICCV 2025
                 </small>
             </h2>
         </div>
@@ -46,12 +46,12 @@
                     <li>
                         <a href="https://cpsiff.github.io">
                           Carter Sifferman
-                        </a>
+                        </a>*
                     </li>
                     <li>
                         <a href="https://li-yiquan.github.io/">
                             Yiquan Li
-                        </a>
+                        </a>*
                     </li>
                     <li>
                         <a href="">
@@ -84,41 +84,162 @@
         </div>
 
 
-        <!-- <div class="row">
+        <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="https://arxiv.org/pdf/2408.03838">
+                            <a href="">
                             <image src="img/paper_image.png" height="60px">
-                                <h4><strong>Paper</strong></h4>
-                            </a>
-                        </li> -->
-                        <!-- <li>
-                            <a href="https://www.youtube.com/watch?v=vJdfpmd6OE0">
-                            <image src="img/youtube_icon.png" height="60px">
-                                <h4><strong>Video</strong></h4>
+                                <h4><strong>Paper (Coming Soon)</strong></h4>
                             </a>
                         </li>
                         <li>
+                            <a href="">
+                            <image src="img/youtube_icon.png" height="60px">
+                                <h4><strong>Video (Coming Soon)</strong></h4>
+                            </a>
+                        </li>
+                        <!-- <li>
                             <a href="https://github.com/uwgraphics/ProximityPlanarRecovery">
                             <image src="img/github_logo.png" height="60px">
                                 <h4><strong>Code</strong></h4>
                             </a>
                         </li> -->
-                    <!-- </ul>
+                    </ul>
                 </div>
-        </div> -->
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <img src="img/teaser.png" class="img-responsive" alt="Teaser Image" style="width:100%;">
+            </div>
+            <div class="col-md-8 col-md-offset-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    <strong>Figure:</strong> We introduce a method for recovering the geometry of
+                    parametric 3D scenes, such as the 6D pose of a known object, from a distributed
+                    set of <emph>very few</emph> (<emph>e.g.</emph>, 15), diffuse
+                    (<emph>i.e.</emph>, wide field-of-view) single-pixel ToF Sensors. Methods based on traditional
+                    depth sensors suffer poor performance under a low-pixel-count regime due to their
+                    sparse coverage. Our method outperforms a point cloud-based baseline by utilizing
+                    the entirety of data recovered by a diffuse ToF sensor.
+                </p>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Project Page Coming Soon!
+                    Abstract
                 </h3>
                 <p class="text-justify">
-                    <!-- Coming Soon -->
+                    We aim to recover the geometry of 3D parametric scenes using <em>very few</em>
+                    depth measurements from low-cost, commercially available time-of-flight sensors.
+                    These sensors offer very low spatial resolution (<em>i.e.</em>, a single pixel),
+                    but image a wide field-of-view per pixel and capture detailed time-of-flight data
+                    in the form of time-resolved photon counts. This time-of-flight data encodes rich
+                    scene information and thus enables recovery of simple scenes from sparse measurements.
+                    We investigate the feasibility of using a distributed set of few measurements
+                    (<em>e.g.</em>, as few as 15 pixels) to recover the geometry of simple parametric
+                    scenes with a strong prior, such as estimating the 6D pose of a known object.
+                    To achieve this, we design a method that utilizes both feed-forward prediction
+                    to infer scene parameters, and differentiable rendering within an analysis-by-synthesis
+                    framework to refine the scene parameter estimate. We develop hardware prototypes
+                    and demonstrate that our method effectively recovers object pose given an untextured
+                    3D model in both simulations and controlled real-world captures, and show promising
+                    initial results for other parametric scenes. We additionally conduct experiments
+                    to explore the limits and capabilities of our imaging solution.
                 </p>
             </div>
         </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Method
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <img src="img/method.png" class="img-responsive" alt="Method Architecture Diagram" style="width:100%;">
+            </div>
+            <div class="col-md-8 col-md-offset-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    <br>
+                    We present an <emph>analysis-by-synthesis</emph> based approach. Our method
+                    integrates (1) a learning-based feedforward model which predicts an initial
+                    estimate of scene parameters; (2) a differentiable renderer that synthesizes
+                    sensor measurements given scene parameters in the parametric model; and (3)
+                    an optimization-based refiner that iteratively renders sensor measurements to
+                    optimize scene parameters using the differentiable renderer. To address the
+                    scarcity of real-world imaging data, we re-use our renderer to generate a
+                    large-scale synthetic dataset for training our feedforward model, and explore
+                    its ability to transfer to real-world captures.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results: 6D Pose Estimation with 15 ToF Pixels
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <img src="img/6D_pose_1.png" class="img-responsive" alt="6D Pose Estimaion Results on 3D Printed Objects" style="width:100%; margin-bottom: 20px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <img src="img/6D_pose_2.png" class="img-responsive" alt="6D Pose Estimaion Results on YCB Objects" style="width:100%;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results: Hand Pose Estimation with 8 ToF Pixels
+                </h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <img src="img/hand_pose.png" class="img-responsive" alt="Hand Pose Estimation Results" style="width:100%;">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-12 col-md-offset-0">
+                    <textarea id="bibtex" class="form-control" readonly>
+@inproceedings{Sifferman2025Recovering,
+    title={Recovering Parametric Scenes from Very Few Time-of-Flight Pixels},
+    author={Sifferman, Carter and Li, Yiquan and Li, Yiming and Mu, Fangzhou and Gleicher, Michael
+            and Gupta, Mohit and Li, Yin},
+    booktitle={International Conference on Computer Vision (ICCV)},
+    year={2025}
+}
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+
 <br>
 
         <div class="row">
