@@ -29,6 +29,11 @@ export const aboutMe: AboutMe = {
   <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>. My research utilizes
   low-level techniques from computational imaging to improve machine perception
   in resource-constrained settings. <br> <br>
+  I'm proud of the videos I've made communicating my research,
+  which have graciously been picked up by the YouTube algorithm.
+  You can check them out <a href="https://youtu.be/vJdfpmd6OE0?si=__uS_1874i1nkKaM">here</a>
+  and <a href="https://youtu.be/4m9GzPTr8y4?si=gW6ku43Z9g0sGfJd">here</a>.
+  <br> <br>
   I will be graduating shortly and am seeking a full-time
   <strong> applied scientist</strong>, <strong>research scientist</strong>,
   or <strong>engineering</strong> role. I am most interested in solving important problems
