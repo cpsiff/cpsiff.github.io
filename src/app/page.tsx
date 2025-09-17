@@ -11,6 +11,7 @@ import { experienceData } from "@/data/experience";
 import { PortfolioEntry } from "@/components/portfolio-entry";
 import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
+import { spacing } from "@/data/spacing";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
           </div>
 
           {/* Right Column - Scrolling Content */}
-          <div className="col-span-12 md:col-span-7 md:col-start-6 space-y-24">
+          <div className={`col-span-12 md:col-span-7 md:col-start-6 ${spacing.sectionGap}`}>
             {/* About section is typically first */}
             {aboutMe.description && (
               <section>
@@ -47,10 +48,10 @@ export default function Home() {
                   return (
                     newsData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                        <h2 className={`font-serif text-l ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           News
                         </h2>
-                        <div className="space-y-12">
+                        <div className={spacing.news.entryGap}>
                           {newsData.map((news, index) => (
                             <div key={index}>
                               <NewsEntry news={news} />
@@ -64,10 +65,10 @@ export default function Home() {
                   return (
                     educationData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
+                        <h2 className={`font-serif text-zinc-700 ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           Education
                         </h2>
-                        <div className="space-y-12">
+                        <div className={spacing.education.entryGap}>
                           {educationData.map((education, index) => (
                             <EducationEntry key={index} education={education} />
                           ))}
@@ -79,15 +80,15 @@ export default function Home() {
                   return (
                     publicationData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                        <h2 className={`font-serif text-l ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           Publications
                         </h2>
-                        <div className="space-y-12">
+                        <div className={spacing.publication.entryGap}>
                           {publicationData.map((publication, index) => (
                             <div key={index}>
                               <PublicationEntry publication={publication} />
                               {index < publicationData.length - 1 && (
-                                <div className="h-px bg-zinc-200 my-8" />
+                                <div className={`h-px bg-zinc-200 ${spacing.publication.dividerSpacing}`} />
                               )}
                             </div>
                           ))}
@@ -99,10 +100,10 @@ export default function Home() {
                   return (
                     experienceData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                        <h2 className={`font-serif text-md ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           Experience
                         </h2>
-                        <div className="space-y-12">
+                        <div className={spacing.experience.entryGap}>
                           {experienceData.map((experience, index) => (
                             <ExperienceEntry
                               key={index}
@@ -117,10 +118,10 @@ export default function Home() {
                   return (
                     portfolioData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                        <h2 className={`font-serif text-md ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           Portfolio
                         </h2>
-                        <div className="space-y-12">
+                        <div className={spacing.portfolio.entryGap}>
                           {portfolioData.map((portfolio, index) => (
                             <PortfolioEntry key={index} portfolio={portfolio} />
                           ))}

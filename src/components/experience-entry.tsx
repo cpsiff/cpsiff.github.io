@@ -1,4 +1,5 @@
 import { Experience } from "@/data/experience";
+import { spacing } from "@/data/spacing";
 
 export function ExperienceEntry({ experience }: { experience: Experience }) {
   return (
@@ -21,17 +22,17 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
           )}
         </h3>
         {experience.advisor && (
-          <p className="text-sm text-zinc-600 leading-relaxed italic mt-2">
+          <p className={`text-sm text-zinc-600 leading-relaxed italic ${spacing.experience.internalSpacing}`}>
             Advisor: {experience.advisor}
           </p>
         )}
         {experience.manager && (
-          <p className="text-sm text-zinc-600 leading-relaxed italic mt-2">
+          <p className={`text-sm text-zinc-600 leading-relaxed italic ${spacing.experience.internalSpacing}`}>
             Manager: {experience.manager}
           </p>
         )}
         {experience.description && (
-          <p className="text-sm text-zinc-600 leading-relaxed mt-2">
+          <p className={`text-sm text-zinc-600 leading-relaxed ${spacing.experience.internalSpacing}`}>
             {experience.description}
           </p>
         )}

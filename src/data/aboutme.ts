@@ -23,8 +23,17 @@ export const aboutMe: AboutMe = {
   title: "Ph.D. Candidate",
   institution: "University of Wisconsin - Madison",
   // Note that links work in the description
-  description:
-    "I am a Computer Science PhD student at University of Wisconsin - Madison, advised by <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>.<br> <br> My research utilizes low-level techniques from computational imaging to improve robot perception. I am most interested in time-of-flight proximity sensors for up-close and distributed robot sensing. ",
+  description:  
+  `I am a Computer Science PhD student at University of Wisconsin - Madison,
+  advised by <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and
+  <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>. My research utilizes
+  low-level techniques from computational imaging to improve machine perception
+  in resource-constrained settings. <br> <br>
+  I will be graduating shortly and am seeking a full-time
+  <strong> applied scientist</strong>, <strong>research scientist</strong>,
+  or <strong>engineering</strong> role. I am most interested in solving important problems
+  in computer vision, imaging, and robotics. See <a href="/Carter_Sifferman_CV.pdf"/>my CV</a> for
+  more info, and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.`,
   email: "sifferman@wisc.edu",
   imageUrl:
     "/CarterSifferman.jpg",

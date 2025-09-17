@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
         destination: '/recovering_parametric_scenes/index.html',
         permanent: true,
       },
+      {
+        source: '/efficient_detection',
+        destination: '/efficient_detection/index.html',
+        permanent: true,
+      },
     ];
   },
 };

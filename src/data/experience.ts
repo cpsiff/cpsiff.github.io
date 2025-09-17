@@ -10,21 +10,30 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
-    date: "Summer 2023",
-    title: "Research Intern",
-    company: "DeepMind",
+    date: "Summer 2025",
+    title: "Applied Scientist II Intern",
+    company: "Amazon Robotics",
     description:
-      "Developed novel algorithms for causal structure learning in reinforcement learning settings",
-    advisor: "Peter Wang",
-    companyUrl: "https://deepmind.com",
+      "Computational Imaging for Automation",
+    // advisor: "Peter Wang",
+    // companyUrl: "https://deepmind.com",
   },
   {
     date: "Summer 2022",
-    title: "Research Intern",
-    company: "Google Research",
+    title: "Machine Vision Research Intern",
+    company: "CyberOptics",
     description:
-      "Worked on improving robustness of large language models to distribution shifts",
-    manager: "Elise Brown",
-    companyUrl: "https://google.com",
+      "Computer Vision for Industrial Inspection",
+    // advisor: "Peter Wang",
+    // companyUrl: "https://deepmind.com",
+  },
+  {
+    date: "Summer 2018",
+    title: "Software Engineer Intern",
+    company: "Cerner",
+    // description:
+      // "Computer Vision for Industrial Inspection",
+    // advisor: "Peter Wang",
+    // companyUrl: "https://deepmind.com",
   },
 ];
