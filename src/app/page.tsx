@@ -48,7 +48,7 @@ export default function Home() {
                   return (
                     newsData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className={`font-serif text-l ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
+                        <h2 className={`font-serif text-xl ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           News
                         </h2>
                         <div className={spacing.news.entryGap}>
@@ -80,7 +80,7 @@ export default function Home() {
                   return (
                     publicationData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className={`font-serif text-l ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
+                        <h2 className={`font-serif text-xl ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           Publications
                         </h2>
                         <div className={spacing.publication.entryGap}>
@@ -100,7 +100,7 @@ export default function Home() {
                   return (
                     experienceData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className={`font-serif text-md ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
+                        <h2 className={`font-serif text-xl ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           Experience
                         </h2>
                         <div className={spacing.experience.entryGap}>
@@ -118,7 +118,7 @@ export default function Home() {
                   return (
                     portfolioData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className={`font-serif text-md ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
+                        <h2 className={`font-serif text-xl ${spacing.sectionHeaderBottom} tracking-wide uppercase`}>
                           Portfolio
                         </h2>
                         <div className={spacing.portfolio.entryGap}>
