@@ -31,15 +31,15 @@ export const aboutMe: AboutMe = {
   in resource-constrained settings. <br> <br>
   I'm proud of the videos I've made communicating my research,
   which have graciously been picked up by the YouTube algorithm.
-  You can check them out <a href="https://youtu.be/vJdfpmd6OE0?si=__uS_1874i1nkKaM">here</a>
-  and <a href="https://youtu.be/4m9GzPTr8y4?si=gW6ku43Z9g0sGfJd">here</a>.
+  You can check them out <a href="https://youtu.be/vJdfpmd6OE0?si=__uS_1874i1nkKaM">here</a>,
+  <a href="https://youtu.be/4m9GzPTr8y4?si=gW6ku43Z9g0sGfJd">here</a>,
+  and <a href="https://youtu.be/p6G4_JU5y2k">here</a>.
   <br> <br>
   I will be graduating shortly and am seeking a full-time
   <strong> applied scientist</strong>, <strong>research scientist</strong>,
   or <strong>engineering</strong> role. I am most interested in solving important problems
   in computer vision, imaging, and robotics, and am open to exploring new areas if
-  the mission is right. See <a href="/Carter_Sifferman_CV.pdf"/>my CV</a> for
-  more info, and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.`,
+  the mission is right. See <a href="/Carter_Sifferman_CV.pdf"/>my CV</a> and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.`,
   email: "sifferman@wisc.edu",
   imageUrl:
     "/CarterSifferman.jpg",
