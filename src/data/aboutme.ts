@@ -26,9 +26,9 @@ export const aboutMe: AboutMe = {
   description:  
   `I am a Computer Science PhD student at University of Wisconsin - Madison,
   advised by <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and
-  <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>. My research utilizes
-  low-level techniques from computational imaging to improve machine perception
-  in resource-constrained settings. <br> <br>
+  <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>. My research utilizes techniques
+  from machine learning and computational imaging to enable 3D computer vision in resource-constrained
+  settings. <br> <br>
   I'm proud of the videos I've made communicating my research,
   which have graciously been picked up by the YouTube algorithm.
   You can check them out <a href="https://youtu.be/vJdfpmd6OE0?si=__uS_1874i1nkKaM">here</a>,
