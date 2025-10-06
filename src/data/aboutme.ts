@@ -37,7 +37,7 @@ export const aboutMe: AboutMe = {
   <br> <br>
   <div style="background-color: #f0f9f0; padding: 16px; border-radius: 8px; margin: 8px 0;">
   I will be graduating shortly and am seeking a full-time
-  <strong> applied scientist</strong>, <strong>research scientist</strong>,
+  <strong> scientist</strong>
   or <strong>engineering</strong> role. I am most interested in solving important problems
   in computer vision, imaging, and robotics, and am open to exploring new areas if
   the mission is right. See <a href="/Carter_Sifferman_CV.pdf"/>my CV</a> and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.
