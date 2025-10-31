@@ -6,7 +6,7 @@ export interface AboutMe {
   email: string;
   imageUrl?: string;
   blogUrl?: string;
-  cvUrl?: string;
+  resumeUrl?: string;
   googleScholarUrl?: string;
   twitterUsername?: string;
   blueskyUsername?: string;
@@ -40,7 +40,7 @@ export const aboutMe: AboutMe = {
   <strong> applied scientist</strong>, <strong>research scientist</strong>,
   or <strong>engineering</strong> role. I am most interested in solving important problems
   in computer vision, imaging, and robotics, and am open to exploring new areas if
-  the mission is right. See <a href="/Carter_Sifferman_CV.pdf"/>my CV</a> and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.
+  the mission is right. See <a href="/Carter Sifferman Resume.pdf"/>my resume</a> and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.
   </div>`,
   email: "sifferman@wisc.edu",
   imageUrl:
@@ -50,7 +50,7 @@ export const aboutMe: AboutMe = {
   twitterUsername: "cartsiff",
   blueskyUsername: "cartsiff.bsky.social",
   googleScholarUrl: "https://scholar.google.com/citations?user=tiajEPoAAAAJ&hl=en",
-  cvUrl: "/Carter_Sifferman_CV.pdf",
+  resumeUrl: "/Carter Sifferman Resume.pdf",
   institutionUrl: "https://www.cs.wisc.edu/",
   // altName: "",
   // secretDescription: "I like dogs.",
