@@ -26,9 +26,9 @@ export const aboutMe: AboutMe = {
   description:  
   `I am a Computer Science PhD student at University of Wisconsin - Madison,
   advised by <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and
-  <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>. My research utilizes
-  low-level techniques from computational imaging to improve machine perception
-  in resource-constrained settings. <br> <br>
+  <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>. My research utilizes techniques
+  from machine learning and computational imaging to enable 3D computer vision in resource-constrained
+  settings. <br> <br>
   I'm proud of the videos I've made communicating my research,
   which have graciously been picked up by the YouTube algorithm.
   You can check them out <a href="https://youtu.be/vJdfpmd6OE0?si=__uS_1874i1nkKaM">here</a>,
@@ -37,7 +37,7 @@ export const aboutMe: AboutMe = {
   <br> <br>
   <div style="background-color: #f0f9f0; padding: 16px; border-radius: 8px; margin: 8px 0;">
   I will be graduating shortly and am seeking a full-time
-  <strong> applied scientist</strong>, <strong>research scientist</strong>,
+  <strong> scientist</strong>
   or <strong>engineering</strong> role. I am most interested in solving important problems
   in computer vision, imaging, and robotics, and am open to exploring new areas if
   the mission is right. See <a href="/Carter Sifferman Resume.pdf"/>my resume</a> and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.
