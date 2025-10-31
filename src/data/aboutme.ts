@@ -38,7 +38,7 @@ export const aboutMe: AboutMe = {
   <div style="background-color: #f0f9f0; padding: 16px; border-radius: 8px; margin: 8px 0;">
   I will be graduating shortly and am seeking a full-time
   <strong> scientist</strong>
-  or <strong>engineering</strong> role. I am most interested in solving important problems
+  or <strong>engineer</strong> role. I am most interested in solving important problems
   in computer vision, imaging, and robotics, and am open to exploring new areas if
   the mission is right. See <a href="/Carter Sifferman Resume.pdf"/>my resume</a> and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.
   </div>`,
