@@ -33,15 +33,7 @@ export const aboutMe: AboutMe = {
   which have graciously been picked up by the YouTube algorithm.
   You can check them out <a href="https://youtu.be/vJdfpmd6OE0?si=__uS_1874i1nkKaM">here</a>,
   <a href="https://youtu.be/4m9GzPTr8y4?si=gW6ku43Z9g0sGfJd">here</a>,
-  and <a href="https://youtu.be/p6G4_JU5y2k">here</a>.
-  <br> <br>
-  <div style="background-color: #f0f9f0; padding: 16px; border-radius: 8px; margin: 8px 0;">
-  I will be graduating shortly and am seeking a full-time
-  <strong> scientist</strong>
-  or <strong>engineer</strong> role. I am most interested in solving important problems
-  in computer vision, imaging, and robotics, and am open to exploring new areas if
-  the mission is right. See <a href="/Carter Sifferman Resume.pdf"/>my resume</a> and <a href="mailto:sifferman@wisc.edu">send me an email</a> to connect.
-  </div>`,
+  and <a href="https://youtu.be/p6G4_JU5y2k">here</a>.`,
   email: "sifferman@wisc.edu",
   imageUrl:
     "/CarterSifferman.jpg",
