@@ -25,7 +25,8 @@ export const aboutMe: AboutMe = {
   // Note that links work in the description
   description:  
   `I am a Machine Learning Engineer at <a href=https://www.bluerivertechnology.com/>
-  Blue River Technology</a>, working on autonomy for agriculture. Previously, I completed my PhD
+  Blue River Technology</a>, working on computer vision for agricultural robotics.
+  Previously, I completed my PhD
   at the University of Wisconsin - Madison, advised by
   <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and
   <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>, where I worked on computer 
