@@ -20,8 +20,8 @@ export interface AboutMe {
 
 export const aboutMe: AboutMe = {
   name: "Carter Sifferman",
-  // title: "Computer Scientist",
-  // institution: "University of Wisconsin - Madison",
+  title: "Computer Scientist",
+  institution: "Madison, Wisconsin",
   // Note that links work in the description
   description:  
   `I am currently a Machine Learning Engineer at <a href=https://www.bluerivertechnology.com/>
