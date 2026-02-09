@@ -24,7 +24,7 @@ export const aboutMe: AboutMe = {
   institution: "Madison, Wisconsin",
   // Note that links work in the description
   description:  
-  `I am currently a Machine Learning Engineer at <a href=https://www.bluerivertechnology.com/>
+  `I am a Machine Learning Engineer at <a href=https://www.bluerivertechnology.com/>
   Blue River Technology</a>, working on autonomy for agriculture. Previously, I completed my PhD
   at the University of Wisconsin - Madison, advised by
   <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and
