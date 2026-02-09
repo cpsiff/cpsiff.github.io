@@ -20,16 +20,17 @@ export interface AboutMe {
 
 export const aboutMe: AboutMe = {
   name: "Carter Sifferman",
-  title: "Ph.D. Candidate",
-  institution: "University of Wisconsin - Madison",
+  // title: "Computer Scientist",
+  // institution: "University of Wisconsin - Madison",
   // Note that links work in the description
   description:  
-  `I am a Computer Science PhD student at University of Wisconsin - Madison,
-  advised by <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and
-  <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>. My research utilizes techniques
-  from machine learning and computational imaging to enable 3D computer vision in resource-constrained
-  settings. <br> <br>
-  I'm proud of the videos I've made communicating my research,
+  `I am currently a Machine Learning Engineer at <a href=https://www.bluerivertechnology.com/>
+  Blue River Technology</a>, working on autonomy for agriculture. Previously, I completed my PhD
+  at the University of Wisconsin - Madison, advised by
+  <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and
+  <a href=https://wisionlab.com/people/mohit-gupta/>Mohit Gupta</a>, where I worked on computer 
+  vision for robotics, particularly with miniature LiDAR sensors. <br><br>
+  I'm proud of the videos I've made communicating my PhD research,
   which have graciously been picked up by the YouTube algorithm.
   You can check them out <a href="https://youtu.be/vJdfpmd6OE0?si=__uS_1874i1nkKaM">here</a>,
   <a href="https://youtu.be/4m9GzPTr8y4?si=gW6ku43Z9g0sGfJd">here</a>,
