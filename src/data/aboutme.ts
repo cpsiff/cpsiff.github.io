@@ -36,7 +36,7 @@ export const aboutMe: AboutMe = {
   You can check them out <a href="https://youtu.be/vJdfpmd6OE0?si=__uS_1874i1nkKaM">here</a>,
   <a href="https://youtu.be/4m9GzPTr8y4?si=gW6ku43Z9g0sGfJd">here</a>,
   and <a href="https://youtu.be/p6G4_JU5y2k">here</a>.`,
-  email: "sifferman@wisc.edu",
+  email: "cpsiff@gmail.com",
   imageUrl:
     "/CarterSifferman.jpg",
   githubUsername: "cpsiff",
