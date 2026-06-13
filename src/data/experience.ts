@@ -13,7 +13,7 @@ export const experienceData: Experience[] = [
     date: "2026 - Present",
     title: "Machine Learning Engineer",
     company: "Blue River Technology",
-    description: "Computer Vision for Agricultural Robotics"
+    description: "Autonomous Vehicles for Agriculture"
   },
   {
     date: "Summer 2025",

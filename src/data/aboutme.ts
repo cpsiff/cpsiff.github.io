@@ -20,12 +20,12 @@ export interface AboutMe {
 
 export const aboutMe: AboutMe = {
   name: "Carter Sifferman",
-  title: "Computer Scientist",
-  institution: "Madison, Wisconsin",
+  title: "Machine Learning Engineer",
+  institution: "Madison, WI",
   // Note that links work in the description
   description:  
   `I am a Machine Learning Engineer at <a href=https://www.bluerivertechnology.com/>
-  Blue River Technology</a>, working on computer vision for agricultural robotics.
+  Blue River Technology</a>, working on autonomous agriculture.
   Previously, I completed my PhD
   at the University of Wisconsin - Madison, advised by
   <a href=https://gleicher.sites.cs.wisc.edu/>Michael Gleicher</a> and
@@ -41,11 +41,11 @@ export const aboutMe: AboutMe = {
     "/CarterSifferman.jpg",
   githubUsername: "cpsiff",
   linkedinUsername: "cpsiff",
-  twitterUsername: "cartsiff",
-  blueskyUsername: "cartsiff.bsky.social",
+  // twitterUsername: "cartsiff",
+  // blueskyUsername: "cartsiff.bsky.social",
   googleScholarUrl: "https://scholar.google.com/citations?user=tiajEPoAAAAJ&hl=en",
-  resumeUrl: "/Carter Sifferman Resume.pdf",
-  institutionUrl: "https://www.cs.wisc.edu/",
+  // resumeUrl: "/Carter Sifferman Resume.pdf",
+  institutionUrl: "https://www.bluerivertechnology.com",
   // altName: "",
   // secretDescription: "I like dogs.",
 };
