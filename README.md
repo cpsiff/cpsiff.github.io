@@ -1,5 +1,40 @@
 # research-website-template
 
+## This site's deployment
+
+The production portfolio is **https://cpsiff.net**, served by Cloudflare Workers
+Static Assets (`cpsiff-website`). `www.cpsiff.net` uses a separate, small redirect
+Worker (`cpsiff-www-redirect`) that preserves paths and query strings.
+
+Use Node.js 22 and the committed npm lockfile:
+
+```sh
+npm ci
+npm run build
+npm run preview
+```
+
+`npm run build` exports Next.js into `out/`, including the six standalone research
+pages, PDFs, and videos from `public/`. Cloudflare handles directory indexes and
+serves the generated 404 page for missing URLs. No Next.js server is required.
+
+After authenticating with `npx wrangler login`, `npm run deploy` publishes both
+Workers. The account and domains are declared in `wrangler.jsonc` and
+`wrangler.redirect.jsonc`; credentials are never committed.
+
+Cloudflare Workers Builds should connect this repository's `master` branch with
+build command `npm run build`, deploy command `npm run deploy`, and root `/`.
+GitHub Pages also retains its existing build as a fallback; its custom-domain
+setting points to `cpsiff.net` so old `cpsiff.github.io` URLs redirect there.
+DNS for the production domain must point to Cloudflare, not GitHub Pages.
+
+Future apps should use separate projects and subdomains. This portfolio uses no
+paid Cloudflare services and has no visitor analytics added.
+
+---
+
+The original template documentation follows.
+
 This is a React + Next.js template meant for research websites. See a [demo of the template here](https://tovacinni.github.io/research-website-template/). My own [personal website](https://tovacinni.github.io) is also built with the same template.
 
 In practice it could probably be used by anyone.

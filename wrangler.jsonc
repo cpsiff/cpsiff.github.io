@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cpsiff-website",
+  "account_id": "392851e0e46db443f6520107d5fea752",
+  "compatibility_date": "2026-09-19",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "cpsiff.net", "custom_domain": true }
+  ]
+}

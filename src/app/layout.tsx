@@ -26,6 +26,8 @@ const ptSerif = PT_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cpsiff.net"),
+  alternates: { canonical: "/" },
   title: customMetadata.title || aboutMe.name,
   description: customMetadata.description || aboutMe.description,
   icons: {
