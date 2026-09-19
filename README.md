@@ -18,8 +18,11 @@ npm run preview
 pages, PDFs, and videos from `public/`. Cloudflare handles directory indexes and
 serves the generated 404 page for missing URLs. No Next.js server is required.
 
-After authenticating with `npx wrangler login`, `npm run deploy` publishes both
-Workers. The account and domains are declared in `wrangler.jsonc` and
+After authenticating with `npx wrangler login`, `npm run deploy` publishes the site.
+The separate `npm run deploy:redirect` command publishes the `www` redirect from
+a local authenticated terminal only. Do not run it in the site's Cloudflare Builds
+job: Builds forces deployments to its connected Worker name.
+The account and domains are declared in `wrangler.jsonc` and
 `wrangler.redirect.jsonc`; credentials are never committed.
 
 Cloudflare Workers Builds connects this repository's `master` branch with

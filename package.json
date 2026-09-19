@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "wrangler deploy && wrangler deploy --config wrangler.redirect.jsonc",
+    "deploy": "wrangler deploy",
+    "deploy:redirect": "wrangler deploy --config wrangler.redirect.jsonc",
     "preview": "wrangler dev",
     "start": "next start",
     "lint": "next lint"
