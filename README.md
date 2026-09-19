@@ -22,11 +22,13 @@ After authenticating with `npx wrangler login`, `npm run deploy` publishes both
 Workers. The account and domains are declared in `wrangler.jsonc` and
 `wrangler.redirect.jsonc`; credentials are never committed.
 
-Cloudflare Workers Builds should connect this repository's `master` branch with
+Cloudflare Workers Builds connects this repository's `master` branch with
 build command `npm run build`, deploy command `npm run deploy`, and root `/`.
 GitHub Pages also retains its existing build as a fallback; its custom-domain
 setting points to `cpsiff.net` so old `cpsiff.github.io` URLs redirect there.
 DNS for the production domain must point to Cloudflare, not GitHub Pages.
+Cloudflare's zone-level **Always Use HTTPS** setting is enabled so HTTP requests,
+including redirects from GitHub Pages, upgrade to HTTPS.
 
 Future apps should use separate projects and subdomains. This portfolio uses no
 paid Cloudflare services and has no visitor analytics added.
