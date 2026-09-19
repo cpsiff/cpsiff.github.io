@@ -1,155 +1,98 @@
-# research-website-template
+# Carter Sifferman's website
 
-## This site's deployment
+Personal portfolio and research pages at **[cpsiff.net](https://cpsiff.net)**.
+Source: **[cpsiff/cpsiff.github.io](https://github.com/cpsiff/cpsiff.github.io)**;
+production branch: **`master`**. The repository keeps its historical name even
+though Cloudflare now serves the production website.
 
-The production portfolio is **https://cpsiff.net**, served by Cloudflare Workers
-Static Assets (`cpsiff-website`). `www.cpsiff.net` uses a separate, small redirect
-Worker (`cpsiff-www-redirect`) that preserves paths and query strings.
+## Start here
 
-Use Node.js 22 and the committed npm lockfile:
+- **Adding another app under cpsiff.net?** Read the
+  [Cloudflare setup and new-app handoff](docs/CLOUDFLARE.md).
+- **An agent working in this repository?** Read [AGENTS.md](AGENTS.md).
+- **Editing the portfolio?** Use the development instructions below.
+
+Future apps should normally live in their own repositories and deployments with
+their own subdomains. They do not need to be merged into this portfolio or linked
+from its homepage. The guide is shared context, not a requirement to copy this
+site's framework or configuration.
+
+## Local development
+
+Use Node.js 22 (pinned in [.node-version](.node-version)) and npm.
 
 ```sh
 npm ci
+npm run dev
+```
+
+The development site is normally at http://localhost:3000. To test the actual
+static output with Cloudflare's local runtime:
+
+```sh
 npm run build
 npm run preview
 ```
 
-`npm run build` exports Next.js into `out/`, including the six standalone research
-pages, PDFs, and videos from `public/`. Cloudflare handles directory indexes and
-serves the generated 404 page for missing URLs. No Next.js server is required.
+Use the local URL printed by Wrangler. Build before previewing: preview serves
+`out/`, not live source edits. Do not use `npm start` for this static-export setup.
+The inherited `npm run lint` command uses `next lint`, which is not supported by
+Next.js 16; it is not a working validation command. The production build includes
+TypeScript checks; lint-tooling cleanup is a separate task.
 
-After authenticating with `npx wrangler login`, `npm run deploy` publishes the site.
-The separate `npm run deploy:redirect` command publishes the `www` redirect from
-a local authenticated terminal only. Do not run it in the site's Cloudflare Builds
-job: Builds forces deployments to its connected Worker name.
-The account and domains are declared in `wrangler.jsonc` and
-`wrangler.redirect.jsonc`; credentials are never committed.
+## Where to edit
 
-Cloudflare Workers Builds connects this repository's `master` branch with
-build command `npm run build`, deploy command `npm run deploy`, and root `/`.
-GitHub Pages also retains its existing build as a fallback; its custom-domain
-setting points to `cpsiff.net` so old `cpsiff.github.io` URLs redirect there.
-DNS for the production domain must point to Cloudflare, not GitHub Pages.
-Cloudflare's zone-level **Always Use HTTPS** setting is enabled so HTTP requests,
-including redirects from GitHub Pages, upgrade to HTTPS.
+| Location | Purpose |
+| --- | --- |
+| `src/data/` | Profile, publications, portfolio, news, education, experience, section order and spacing |
+| `src/components/` | Reusable portfolio UI |
+| `src/app/page.tsx` | Homepage composition |
+| `src/app/layout.tsx` | Shared layout, fonts, metadata and canonical URL |
+| `src/app/globals.css` | Global styles |
+| `public/` | Images, PDFs, videos and standalone research pages |
+| `next.config.ts` | Static export and unoptimized images |
+| `wrangler.jsonc` | Production portfolio hosting |
+| `wrangler.redirect.jsonc`, `workers/www-redirect.js` | Separate www redirect |
+| `.github/workflows/nextjs.yml` | GitHub Pages legacy build, not Cloudflare CI |
 
-Future apps should use separate projects and subdomains. This portfolio uses no
-paid Cloudflare services and has no visitor analytics added.
+Next.js exports the site into generated `out/`. There is no running Next.js
+server, server-side rendering, API server or database for this portfolio.
+Do not edit `out/`, `.next/` or `.wrangler/` as source files.
 
----
+The six standalone research sites are retained at:
 
-The original template documentation follows.
+- `/geometric-calibration/`
+- `/towards_3d_vision/`
+- `/unlocking_proximity_sensors/`
+- `/using_a_distance_sensor/`
+- `/recovering_parametric_scenes/`
+- `/efficient_detection/`
 
-This is a React + Next.js template meant for research websites. See a [demo of the template here](https://tovacinni.github.io/research-website-template/). My own [personal website](https://tovacinni.github.io) is also built with the same template.
+## Publishing
 
-In practice it could probably be used by anyone.
+Commit and push to `master` to trigger Cloudflare Workers Builds. It runs
+`npm run build`, then `npm run deploy`. Verify both the build result and live site
+after publishing. See the [handoff guide](docs/CLOUDFLARE.md) for dashboard settings,
+redirect behavior and recovery precautions.
 
-It is meant to be customizeable, all through modifying the `src/data` - which have arrays of objects that are used to generate the website.
+For an intentional manual deployment from an authenticated local terminal:
 
-For example, `src/data/publication.ts` contains an array like:
-
-```typescript
-export const publicationData: Publication[] = [
-  {
-    year: "2023",
-    conference: "International Conference on Machine Learning (ICML)",
-    title: "Robust Causal Discovery Under Distribution Shift",
-    authors: "Jane Smith, Xue Chen, Sarah Johnson",
-    paperUrl: "https://arxiv.org/abs/2302.13095",
-    codeUrl: "https://github.com/jsmith/robust-causal-discovery",
-  },
-];
+```sh
+npx wrangler login
+npm run build
+npm run deploy
 ```
 
-To update your website, you can simply add objects to the array.
+`npm run deploy` publishes only `cpsiff-website`. The rarely changed www redirect
+is deployed separately with `npm run deploy:redirect` from a local terminal.
+**Never chain that command into the portfolio's Cloudflare Builds job.**
 
-The schemas are defined in the same files, and many fields are optional for flexibility:
+The old `cpsiff.github.io` address redirects to the new domain. GitHub Pages is
+retained for that legacy behavior and as a secondary build; it is not automatic
+failover for Cloudflare. No visitor analytics were added during the migration.
 
-```typescript
-export interface Publication {
-  year: string;
-  conference: string;
-  title: string;
-  authors: string;
-  paperUrl?: string;
-  codeUrl?: string;
-  bibtex?: string;
-  tldr?: string;
-  imageUrl?: string;
-  award?: string;
-}
-```
+## Attribution
 
-Any field with a `?` at the end is optional. Filling them in will create the UI components corresponding to them automatically.
-
-You can also change the order of the sections in `src/data/section-order.ts`, and if you want full customization you can just edit the React components in `src/components`.
-
-This project was birthed from annoyance over HTML + CSS templates- such as the very popular [Jon Barron template](https://github.com/jonbarron/website). The Jon Barron template is amazing because it is simple & complete which is why it's so popular- but over time, maintenance becomes difficult from the amount of duplicate code it creates (the Jon Barron index is now over 4000 lines of code). This is meant to be a much more minimal (to maintain) alternative (and was a good way to spend a few hours to build over holiday weekend).
-
-## Prerequisites
-
-First, install Node.js and npm through the [Node.js official website](https://nodejs.org/).
-
-Verify installation by running:
-
-```bash
-node --version
-npm --version
-```
-
-## Installation
-
-1. Fork the repository
-
-2. Clone the repository
-
-   ```bash
-   git clone [your-repository-url]
-   cd [repository-name]
-   ```
-
-3. Install dependencies
-
-   Inside the repository, run:
-
-   ```bash
-   npm install
-   ```
-
-## Running the Application
-
-1. To start the development server, run (in the repository directory):
-
-   ```bash
-   npm run dev
-   ```
-
-2. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Deploying onto GitHub Pages
-
-1. Fork or clone this repo and push to your own repository at `[your-github-username].github.io`.
-
-2. In your repository settings, ensure the repository name matches `[your-github-username].github.io` if you want it to be your main GitHub Pages site.
-
-3. Push your changes to the main branch.
-
-4. Go to the GitHub page for your repository and go to `Settings` then `Pages`. If you set Source to be `GitHub Actions`, it should suggest you a build script for Next.js.
-
-5. Commit the build script and see things building.
-
-Your site should now be live at `https://[your-github-username].github.io/`.
-
-## Deploying to your own domain
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/) from the creators of Next.js.
-
-1. Create a [Vercel account](https://vercel.com/signup) if you haven't already
-2. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-3. Import your repository on Vercel
-4. Vercel will automatically detect Next.js and configure the build settings
-5. Click "Deploy"
-
-## Contributing
-
-Feel free to drop a pull request whenever!
+Originally based on
+[research-website-template](https://github.com/tovacinni/research-website-template).
+The original MIT copyright notice is preserved in [LICENSE](LICENSE).
